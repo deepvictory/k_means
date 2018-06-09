@@ -9,11 +9,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 
+#Create Alias
 tf.sub = tf.subtract
 
 points_n = 200
 clusters_n = 3
-iterations_n = 100
+iterations_n = 10
 
 points = tf.constant(np.random.uniform(0,10,(points_n, 2)))
 centroids = tf.Variable(tf.slice(tf.random_shuffle(points),[0,0],[clusters_n, -1]))
